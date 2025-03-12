@@ -2,16 +2,13 @@ import cv2
 
 cap = cv2.VideoCapture(0)
 
-
 if not cap.isOpened():
     print("Error: Unable to access the camera.")
     exit()
 
 while True:
-   
     ret, frame = cap.read()
 
-    
     if not ret:
         print("Error: Could not retrieve a frame from the camera.")
         break
@@ -24,7 +21,6 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord('e'):
         break
-
 
 cap.release()
 cv2.destroyAllWindows()
